@@ -24,6 +24,11 @@ public class Player : MonoBehaviour
             Debug.Log("DownWalk");
             transform.Translate(new Vector3(0, 0, -4f * myspeedScript) * Time.deltaTime);
         }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log("jump");
+            transform.Translate(new Vector3(0, 4*1, 0) * Time.deltaTime);
+        }
 
         //rotation
         if (Input.GetKey(KeyCode.LeftArrow))
